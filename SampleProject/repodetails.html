@@ -1,0 +1,33 @@
+<div>
+  <div>
+    <a href="#/main"> Back To Search</a>
+    <a href="#/user/{{repo.owner.login}}"> Back To User Details</a>
+  </div>
+  <h2>{{repo.name}}</h2>
+  <div>
+    Issues : {repo.open_issues_count}
+  </div>
+  <div>
+    <ul>
+      <li ng-repeat="users in collaborators"> {{user.login}}</li>
+    </ul>
+  </div>
+
+  <table classname="rows">
+    <thead>
+      <tr classname="rows">
+        <th>Name</th>
+        <th>Stars</th>
+        <th>Language</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--tr classname="rows" ng-repeat="repo in repos | orderBy:'-stargazers_count'"-->
+      <tr classname="rows" ng-repeat="repo in repos | orderBy:reposortorder">
+        <td>{{repo.name | uppercase}}</td>
+        <td>{{repo.stargazers_count | number}}</td>
+        <td>{{repo.language}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

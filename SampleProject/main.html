@@ -1,0 +1,9 @@
+<div>
+    Default search starts in {{countdown}} sec.
+        <div>{{username}}</div>
+    <form name="searchuser">
+      <input name="user" required="" type="search" ng-model="username" />
+      <input type="submit" value="Search" ng-click="search(username)" />
+    </form>
+    <div ng-include="'user.html'" ng-show="user"></div>
+  </div>

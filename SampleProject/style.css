@@ -1,0 +1,13 @@
+/* Styles go here */
+
+
+body
+{
+  font : verdana;
+  color:brown;
+}
+
+.rows{
+ border-style : solid;
+ border-color=brown;
+}
